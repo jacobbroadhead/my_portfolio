@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.25em;
+}
+
+h3 {
+    font-size: 1em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+p {
+    font-size: .8em;
+}
+
+header {
+    background-color: #4C6375;
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+}
+
+#audio-sections {
+    padding: 40px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.section-title {
+    margin: 0px;
+    padding: 0px;
+}
+
+.section-description {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#clip-title {
+    margin-top: 16px;
+}
+
+audio {
+    width: 275px;
+    height: 40px;
+}
+
+.audio_type {
+    width: auto;
+    border: solid;
+    border-color: rgba(151, 139, 64, 0.535);
+    border-radius: 32px;
+    margin: 8px;
+    max-width: 100%;
+    border-width: 2px;
+}
+
+.meta-tags {
+    max-width: 275px;
+}
+
+#tags-header {
+    margin-bottom: 4px;
+}
+
+#tags {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.tag {
+   padding: 4px;
+   background-color: #4C6375; 
+   border-radius: 15%;
+   color: white;
+   margin: 4px;
+   font-size: .75em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 20px;
+}
+
+.audio-clip {
+    margin-bottom: 8px;
+}
+
+footer {
+    background-color: #4C6375;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Mobile Responsiveness with Media Queries */
+@media only screen and (max-width: 768px) {
+    
+    nav ul {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .audio-clip audio {
+        width: 100%;
+    }
+
+    footer {
+        position: static;
+        padding: 5px;
+    }
+}

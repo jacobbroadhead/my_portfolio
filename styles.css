@@ -50,7 +50,7 @@ header {
 }
 
 audio {
-    width: 275px;
+    width: 350px;
     height: 40px;
 }
 
@@ -65,7 +65,7 @@ audio {
 }
 
 .meta-tags {
-    max-width: 275px;
+    max-width: 350px;
 }
 
 #tags-header {

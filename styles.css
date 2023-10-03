@@ -123,6 +123,10 @@ footer {
 
 /* Mobile Responsiveness with Media Queries */
 @media only screen and (max-width: 768px) {
+
+    body {
+        overflow: none;
+    }
     
     nav ul {
         text-align: center;

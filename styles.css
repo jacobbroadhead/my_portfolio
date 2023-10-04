@@ -138,9 +138,9 @@ footer {
         margin-bottom: 5px;
     }
 
-/*     section {
-        padding: 15px;
-    } */
+    section {
+        padding: 0px;
+    }
 
     .audio-clip audio {
         width: 100%;

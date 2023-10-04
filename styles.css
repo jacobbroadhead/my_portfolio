@@ -140,7 +140,7 @@ footer {
 
     section {
         padding: 15px;
-/*         width: 600px; */
+        width: 100%;
     }
 
     .audio-clip audio {

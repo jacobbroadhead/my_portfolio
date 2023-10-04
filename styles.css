@@ -158,4 +158,9 @@ footer {
     .audio_type {
         min-width: 250px;
     }
+
+    .hide-header {
+        display: none;
+    }
+}
 }

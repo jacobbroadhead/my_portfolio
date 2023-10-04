@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    width: 100%;
 }
 
 h2 {
@@ -126,8 +125,7 @@ footer {
 @media only screen and (max-width: 768px) {
 
     body {
-/*         overflow: none; */
-        width: 100%;
+        overflow: none;
     }
     
     nav ul {
@@ -152,7 +150,4 @@ footer {
         position: static;
         padding: 5px;
     }
-
-    #audio-sections {
-        width: 100%;
 }

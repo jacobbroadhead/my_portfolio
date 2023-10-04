@@ -153,4 +153,7 @@ footer {
         position: static;
         padding: 5px;
     }
+
+    .audio_type {
+        width: 100%;
 }

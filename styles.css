@@ -1,4 +1,4 @@
-body {
+ibody {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -120,7 +120,7 @@ footer {
     color: #FFFFFF;
     text-align: center;
     padding: 10px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }

@@ -153,4 +153,8 @@ footer {
         position: static;
         padding: 5px;
     }
+
+    .audio_type {
+        min-width: 250px;
+    }
 }

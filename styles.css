@@ -126,7 +126,7 @@ footer {
 @media only screen and (max-width: 768px) {
 
     body {
-        overflow: none;
+/*         overflow: none; */
         width: 100%;
     }
     

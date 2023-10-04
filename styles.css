@@ -25,11 +25,11 @@ header {
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
-    height: 100vh; /* Takes up the full vertical height of the viewport */
 }
 
 #audio-sections {
-    padding: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -153,7 +153,4 @@ footer {
         position: static;
         padding: 5px;
     }
-
-    .audio_type {
-        width: 100%;
 }

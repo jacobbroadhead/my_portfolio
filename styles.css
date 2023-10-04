@@ -128,6 +128,10 @@ footer {
 /* Mobile Responsiveness with Media Queries */
 @media only screen and (max-width: 768px) {
 
+    header {
+        position: fixed;
+    }
+    
     body {
         overflow: none;
     }

@@ -144,6 +144,25 @@ footer {
     bottom: 0;
 }
 
+/* Define initial state */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px); /* Optional: Add a slight vertical offset */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Create a fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Optional: Add a slight vertical offset */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Mobile Responsiveness with Media Queries */
 @media only screen and (max-width: 768px) {
     

@@ -7,9 +7,9 @@ Each audio clip is inserted using the following template code:
 
             <!-- Repeat the following block for each audio clip -->
             <article class="audio-clip">
-                <h3 id="clip-title">Young Adult</h3>
+                <h3 id="clip-title">Title</h3>
                 <audio controls controlslist="noplaybackrate">
-                    <source src="https://github.com/jacobbroadhead/my_portfolio/raw/main/voices/Audiobook%20-%20Young%20Adult.mp3" type="audio/mp3">
+                    <source src="link" type="audio/mp3">
                     Your browser does not support the audio element.
                 </audio>
                 <div class="meta-tags">

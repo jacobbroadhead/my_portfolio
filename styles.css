@@ -140,6 +140,15 @@ footer {
         overflow-y: auto;
         overflow-x: none;
     }
+
+    nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+/*     background-color: #4C6375; /* Add a background color */ */
+    padding: 10px;
+    text-align: center;
+    }
     
     nav ul {
         text-align: center;

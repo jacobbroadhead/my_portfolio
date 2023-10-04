@@ -7,6 +7,26 @@
     <title>Jacob Broadhead</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+    <script>
+    const header = document.querySelector('header');
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth <= 768) { // Only on mobile devices
+            if (window.scrollY > 50) { // Adjust the threshold as needed
+                header.classList.add('hide-header');
+                nav.style.position = 'sticky';
+                nav.style.top = '0';
+                nav.style.zIndex = '100';
+            } else {
+                header.classList.remove('hide-header');
+                nav.style.position = 'relative'; // Reset nav to its original position
+                nav.style.top = 'auto';
+                nav.style.zIndex = 'auto';
+            }
+        }
+    });
+</script>
 
 <body>
     <header>

@@ -32,6 +32,10 @@ header {
     display: flex;
 }
 
+img {
+    width: 40%;
+}
+
 #audio-sections {
     padding-top: 40px;
     padding-bottom: 40px;

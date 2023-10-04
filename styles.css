@@ -91,6 +91,13 @@ audio {
    font-size: .75em;
 }
 
+#nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 nav ul {
     list-style-type: none;
     padding: 0;

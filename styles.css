@@ -28,6 +28,10 @@ header {
     margin-bottom: 0;
 }
 
+.bio {
+    display: flex;
+}
+
 #audio-sections {
     padding-top: 40px;
     padding-bottom: 40px;

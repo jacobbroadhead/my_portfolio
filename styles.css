@@ -148,6 +148,11 @@ footer {
     bottom: 0;
 }
 
+header, nav {
+    margin: 0;
+    padding: 0;
+}
+
 /* Define initial state */
 .fade-in {
     opacity: 0;

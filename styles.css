@@ -36,6 +36,7 @@ header {
     justify-content: space-around;
     align-content: center;
     width: 100%;
+    margin-bottom: 24px;
 }
 
 .section-title {

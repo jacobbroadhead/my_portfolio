@@ -103,6 +103,10 @@ audio {
    font-size: .75em;
 }
 
+.top {
+    background-color: #4C6375
+}
+
 nav {
     background-color: #4C6375;
     margin-top: 0;

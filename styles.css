@@ -25,6 +25,7 @@ header {
     color: #FFFFFF;
     padding-top: 10px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 #audio-sections {
@@ -93,6 +94,8 @@ audio {
 
 nav {
     background-color: #4C6375;
+    margin-top: 0;
+    padding: 4px;
 }
 
 #nav {

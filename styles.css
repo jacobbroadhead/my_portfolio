@@ -25,6 +25,7 @@ header {
     color: #FFFFFF;
     padding: 10px;
     text-align: center;
+    height: 100vh; /* Takes up the full vertical height of the viewport */
 }
 
 #audio-sections {

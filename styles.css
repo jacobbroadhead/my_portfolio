@@ -238,14 +238,14 @@ header, nav {
     }
 
     li {
-        padding: 24px;
+        padding: 10px;
     }
 
     .bio {
         width: 90%;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
     }
     
     .bio_description {

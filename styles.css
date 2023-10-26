@@ -211,6 +211,8 @@ header, nav {
 /*     background-color: #4C6375; /* Add a background color */ 
     margin: 16px;
     text-align: center;
+    width: 100%;
+    overflow: none;
     }
 
     #nav {

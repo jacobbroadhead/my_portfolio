@@ -207,14 +207,14 @@ header, nav {
     position: sticky;
     top: 0;
     z-index: 100;
-/*     background-color: #4C6375; /* Add a background color */ */
-    padding: 10px;
+/*     background-color: #4C6375; /* Add a background color */ 
     margin: 16px;
     text-align: center;
     }
 
     #nav {
         padding: 16px;
+
     }
     
     nav ul {

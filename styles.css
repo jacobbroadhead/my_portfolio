@@ -33,6 +33,10 @@ header {
     padding: 24px;
 }
 
+#nav {
+    padding: 10px;
+}
+
 .bio {
     display: flex;
     align-content: center;
@@ -235,7 +239,7 @@ header, nav {
     }
 
     li {
-        padding: 8px;
+        padding: 24px;
     }
 
     section {

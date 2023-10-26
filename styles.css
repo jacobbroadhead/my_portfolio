@@ -209,18 +209,17 @@ header, nav {
 
     nav {
     position: sticky;
-    padding: 16px;
+    /* padding: 16px; */
     top: 0;
     z-index: 100;
 /*     background-color: #4C6375; /* Add a background color */ 
-    margin: 16px;
     text-align: center;
     width: 100%;
     overflow: none;
     }
 
     #nav {
-        padding: 16px;
+        /* padding: 16px; */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -240,6 +239,22 @@ header, nav {
 
     li {
         padding: 24px;
+    }
+
+    .bio {
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    .bio_description {
+        width: 100%
+    }
+    
+    #bio_info {
+        width: 100%;
+        padding: 16px;
     }
 
     section {

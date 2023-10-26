@@ -215,6 +215,10 @@ header, nav {
 
     #nav {
         padding: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
 
     }
     

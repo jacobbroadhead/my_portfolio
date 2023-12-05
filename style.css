@@ -67,6 +67,7 @@
   background-size: 50%; /* This will cover the entire card */
   background-repeat: no-repeat;
   background-position: center;
+  min-width: 100px;
 }
 
 .card:hover {

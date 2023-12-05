@@ -1,281 +1,130 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+
+/* Main container styling */
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  max-width: 1100px;
 }
 
-header h1 {
-    margin: 0;
-    padding: 12px;
+.accordion {
+  margin-right: 16px;
 }
 
-h2 {
-    font-size: 1.35em;
+/* Adjust the width of the accordion items */
+.accordion-item {
+  flex-grow: 1;
+  flex-basis: 0;
 }
 
-h3 {
-    font-size: 1em;
+/* Add flex-wrap to the accordion body to allow card wrapping */
+.accordion-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow card wrapping */
 }
 
-h4 {
-    font-size: 1em;
+/* Adjust the width of the accordion buttons */
+.accordion-button {
+  width: 100%;
+  text-align: left; /* Optional: Align text to the left */
 }
 
-p {
-    font-size: .8em;
+.accordion-button.collapsed {
+  min-width: 400px;
 }
 
-header {
-    background-color: #4C6375;
-    color: #FFFFFF;
-    padding-top: 10px;
-    text-align: center;
-    margin: 0;
-    padding: 24px;
+/* Remove the max-width constraint for the accordion body */
+.accordion-collapse.collapse {
+  max-width: none;
 }
 
-#nav {
-    padding: 10px;
+/* Cards section styling with flex row */
+#cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
 }
 
-.bio {
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    padding: 12px;
-    width: 100%
+.card {
+  flex: 0 1 calc(33.33% - 10px);
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 120px;
+  margin: 8px;
+  max-height: 160px;
+  background-image: url('thumbnail1.jpg');
+  background-size: 50%; /* This will cover the entire card */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-img {
-    width: 30%;
+.card:hover {
+  background-color: #e0e0e0;
 }
 
-.bio_info {
-    width: 60%;
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-#audio-sections {
-    padding-top: 40px;
-    padding-bottom: 40px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    width: 100%;
-    margin-bottom: 24px;
+.card h3, .card p {
+  margin-top: 5px;
 }
 
-.section-title {
-    margin: 0px;
-    padding: 0px;
+/* Preview window styling */
+#preview-window {
+  flex: 0 1 40%;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.section-description {
-    margin-bottom: 0px;
-    padding-bottom: 0px;
-}
-
-#clip-title {
-    margin-top: 16px;
+#reel-info {
+  margin-bottom: 15px;
 }
 
 audio {
-    width: 350px;
-    height: 40px;
+  width: 100%;
 }
 
-.audio_type {
-    width: auto;
-    border: solid;
-    border-color: rgba(151, 139, 64, 0.535);
-    border-radius: 32px;
-    margin: 8px;
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #main-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0px;
+  }
+
+  #cards-section, #preview-window {
     max-width: 100%;
-    border-width: 2px;
+  }
+
+  .accordion {
+    margin: 0px;
+  }
+
+  #preview-window {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Centered and adjusted width on mobile */
+    margin-bottom: 24px;
+  }
+
+  .accordion-button.collapsed {
+    min-width: 200px;
+  }
 }
 
-.meta-tags {
-    max-width: 350px;
-}
-
-#tags-header {
-    margin-bottom: 4px;
-}
-
-#tags {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-}
-
-.tag {
-   padding: 4px;
-   background-color: #4C6375; 
-   border-radius: 15%;
-   color: white;
-   margin: 4px;
-   font-size: .75em;
-}
-
-.top {
-    background-color: #4C6375
-}
-
-nav {
-    background-color: #4C6375;
-    margin-top: 0;
-    padding: 8px;
-}
-
-#nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: center;
-    color: #FFFFFF;
-    padding-bottom: 10px;
-    text-align: center;
-    background-color: #4C6375;
-    margin: 0;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav a {
-    color: #FFFFFF;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    padding: 20px;
-}
-
-.audio-clip {
-    margin-bottom: 8px;
-}
-
-footer {
-    background-color: #4C6375;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px;
-    position: static;
-    width: 100%;
-    bottom: 0;
-}
-
-header, nav {
-    margin: 0;
-    padding: 0;
-}
-
-/* Define initial state */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px); /* Optional: Add a slight vertical offset */
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Create a fade-in animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px); /* Optional: Add a slight vertical offset */
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Mobile Responsiveness with Media Queries */
-@media only screen and (max-width: 768px) {
-    
-    body {
-/*         overflow-y: auto; */
-        overflow-x: none;
-        padding: 0;
-    }
-
-    nav {
-    position: sticky;
-    /* padding: 16px; */
-    top: 0;
-    z-index: 100;
-/*     background-color: #4C6375; /* Add a background color */ 
-    text-align: center;
-    width: 100%;
-    overflow: none;
-    }
-
-    #nav {
-        /* padding: 16px; */
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-    }
-    
-    nav ul {
-        text-align: center;
-        padding-top: 10px;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 5px;
-    }
-
-    li {
-        padding: 10px;
-    }
-
-    .bio {
-        width: 90%;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
-    
-    .bio_description {
-        width: 100%
-    }
-    
-    #bio_info {
-        width: 100%;
-        padding: 16px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    .audio-clip audio {
-        width: 100%;
-    }
-
-    footer {
-        position: static;
-        padding: 5px;
-    }
-
-    .audio_type {
-        min-width: 250px;
-    }
-
-    .hide-header {
-        display: none;
-    }
-}

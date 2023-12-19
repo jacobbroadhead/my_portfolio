@@ -23,7 +23,7 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   flex-wrap: wrap; /* Allow card wrapping */
 }
 
@@ -67,7 +67,6 @@
   background-size: 50%; /* This will cover the entire card */
   background-repeat: no-repeat;
   background-position: center;
-  min-width: 100px;
 }
 
 .card:hover {
@@ -126,6 +125,10 @@ audio {
 
   .accordion-button.collapsed {
     min-width: 200px;
+  }
+
+  .card {
+    width: 200px;
   }
 }
 

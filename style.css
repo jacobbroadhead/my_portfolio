@@ -1,3 +1,11 @@
+/* Bootstrap Overides */
+#h5_override {
+  font-size: 1rem;
+}
+
+#h6_override {
+  font-size: .75rem;
+}
 
 /* Main container styling */
 #main-container {
@@ -56,7 +64,7 @@
   flex: 0 1 calc(33.33% - 10px);
   background-color: #f0f0f0;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 8px;
   margin-bottom: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -64,13 +72,92 @@
   margin: 8px;
   max-height: 160px;
   background-image: url('thumbnail1.jpg');
-  background-size: 50%; /* This will cover the entire card */
+  background-size: 35%; /* This will cover the entire card */
   background-repeat: no-repeat;
   background-position: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
 }
 
-.card:hover {
+#animation_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Animation.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#vg_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Video%20Games.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#tv_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/TV.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#books_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Audiobooks.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+.selected-animate {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Animation%20Selected.png?raw=true)!important;
+}
+
+.selected-vg {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Video%20Games%20Selected.png?raw=true)!important;
+}
+
+.selected-tv {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/TV%20Selected.png?raw=true)!important;
+}
+
+.selected.books {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Audiobooks%20Selected.png?raw=true)!important;
+}
+
+#animation_card_override:hover {
   background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Animation%20Selected.png?raw=true);
+}
+
+#vg_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Video%20Games%20Selected.png?raw=true);
+}
+
+#tv_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/TV%20Selected.png?raw=true);
+}
+
+#books_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Audiobooks%20Selected.png?raw=true);
 }
 
 .card img {
@@ -102,6 +189,60 @@ audio {
   width: 100%;
 }
 
+/* Audio Player */
+#custom-audio-player {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#play-pause-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#play-pause-button:hover {
+  background-color: #45a049;
+}
+
+#progress-container {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+#progress {
+  background-color: #4CAF50;
+  height: 100%;
+  border-radius: 5px;
+  width: 100px;
+}
+
+#time-display {
+  font-size: 12px;
+  color: #333;
+  min-width: 60px;
+  text-align: center;
+}
+
+#volume-control {
+  width: 75px;
+  cursor: pointer;
+}
+
+
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-container {
@@ -132,5 +273,23 @@ audio {
   .card {
     width: 200px;
   }
+
+  #preview-window {
+    position: sticky;
+    top: 0px;
+  }
+
+  #main-container {
+    padding-top: 0;
+  }
 }
 
+@media screen and (max-width: 767px) {
+  #volume-control {
+    display: none;  /* Hide volume control on small screens */
+  }
+
+  #progress-container {
+    display: none;  /* Hide progress bar on small screens */
+  }
+}

@@ -6,17 +6,16 @@ document.addEventListener('DOMContentLoaded', function () {
   const progressBar = document.getElementById('progress');
   const timeDisplay = document.getElementById('time-display');
   const cards = document.querySelectorAll('.card');
-  const accordionButtons = document.querySelectorAll('.accordion-button');
+  const accordionItems = document.querySelectorAll('.accordion-item');
+  const previewWindow = document.getElementById('preview-window');
   let currentTrackIndex = 0;
 
-  // Function to format time in minutes:seconds
   function formatTime(seconds) {
       const minutes = Math.floor(seconds / 60);
       const secondsPart = Math.floor(seconds % 60);
       return `${minutes}:${secondsPart.toString().padStart(2, '0')}`;
   }
 
-  // Function to update the progress bar and time display
   function updateProgressBar() {
       if (audioPlayer.duration) {
           const percentage = (audioPlayer.currentTime / audioPlayer.duration) * 100;
@@ -25,12 +24,10 @@ document.addEventListener('DOMContentLoaded', function () {
       }
   }
 
-  // Function to toggle play/pause icon
   function togglePlayPauseIcon() {
       playPauseButton.innerHTML = audioPlayer.paused ? '<i class="fas fa-play"></i>' : '<i class="fas fa-pause"></i>';
   }
 
-  // Function to play a track and update selection
   function playTrack(index) {
       cards.forEach(card => card.classList.remove('selected-animate', 'selected-vg', 'selected-tv', 'selected-books'));
       const newCard = cards[index];
@@ -42,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
       togglePlayPauseIcon();
   }
 
-  // Event listeners for the audio player buttons
   playPauseButton.addEventListener('click', () => audioPlayer.paused ? audioPlayer.play() : audioPlayer.pause());
   nextButton.addEventListener('click', () => playTrack((currentTrackIndex + 1) % cards.length));
   backButton.addEventListener('click', () => playTrack((currentTrackIndex - 1 + cards.length) % cards.length));
@@ -52,18 +48,42 @@ document.addEventListener('DOMContentLoaded', function () {
   audioPlayer.addEventListener('timeupdate', updateProgressBar);
   audioPlayer.addEventListener('loadedmetadata', () => timeDisplay.textContent = `0:00 / ${formatTime(audioPlayer.duration)}`);
 
-  // Accordion logic to keep one section open at all times
-  accordionButtons.forEach(button => {
-      button.addEventListener('click', function(event) {
-          if (!this.classList.contains('collapsed')) {
-              const openCount = Array.from(accordionButtons).filter(btn => !btn.classList.contains('collapsed')).length;
-              if (openCount <= 1) {
-                  event.preventDefault();
-                  event.stopPropagation();
-              }
+  function scrollToAccordionItem(item) {
+      const previewWindowHeight = previewWindow.offsetHeight;
+      const accordionTop = item.getBoundingClientRect().top + window.pageYOffset;
+      const positionToScroll = accordionTop - previewWindowHeight;
+
+      window.scrollTo({
+          top: positionToScroll,
+          behavior: 'smooth'
+      });
+  }
+
+  function updateAccordionButtons() {
+      const openItems = Array.from(accordionItems).filter(item => !item.querySelector('.accordion-collapse').classList.contains('collapse'));
+      accordionItems.forEach(item => {
+          const button = item.querySelector('.accordion-button');
+          if (openItems.length === 1 && openItems.includes(item)) {
+              button.setAttribute('disabled', 'disabled');
+          } else {
+              button.removeAttribute('disabled');
           }
       });
+  }
+
+  accordionItems.forEach(item => {
+      const button = item.querySelector('.accordion-button');
+      button.addEventListener('click', function() {
+          setTimeout(() => {
+              updateAccordionButtons();
+              if (!button.classList.contains('collapsed')) {
+                  scrollToAccordionItem(item);
+              }
+          }, 0);
+      });
   });
+
+  updateAccordionButtons();
 
   // ... any other event listeners or functions ...
 });

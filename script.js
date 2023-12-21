@@ -67,3 +67,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // ... any other event listeners or functions ...
 });
+ 

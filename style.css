@@ -197,6 +197,7 @@ audio {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -246,50 +247,62 @@ audio {
 /* Responsive design adjustments */
 @media (max-width: 768px) {
   #main-container {
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    margin: 0px;
   }
 
   #cards-section, #preview-window {
-    max-width: 100%;
-  }
-
-  .accordion {
-    margin: 0px;
-  }
-
-  #preview-window {
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; /* Centered and adjusted width on mobile */
-    margin-bottom: 24px;
+    width: 100%;
   }
 
   .accordion-button.collapsed {
-    min-width: 200px;
+    min-width: 200px; /* Adjust the minimum width for mobile */
   }
 
   .card {
-    width: 200px;
+    width: 100px; /* Cards take full width on smaller screens */
+    max-width: none; /* Remove max-width constraint */
+  }
+
+  #h5_override {
+    font-size: .8rem !important;
   }
 
   #preview-window {
     position: sticky;
-    top: 0px;
+    top: 0px; /* Stick to the top of the viewport */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Centered and adjusted width on mobile */
+    margin-bottom: 24px;
+    z-index: 100; /* Ensure it stays on top of other content */
+    background-color: #ffffff; /* Optional: to ensure text readability */
+    width: 100%; /* Full width of the viewport */
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd; /* Optional: for styling */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: for styling */
   }
 
-  #main-container {
-    padding-top: 0;
+  #custom-audio-player {
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align the elements */
+  }
+
+  #control_bar {
+    width: 100%; /* Full width for control bar */
+    justify-content: center; /* Center elements in the control bar */
+  }
+
+  #progress-container, #volume-control {
+    display: none; /* Hide elements not needed on mobile */
+  }
+
+  #time-display {
+    order: 3; /* Move time display below controls */
+    margin-top: 10px; /* Add some spacing */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
   }
 }
-
-@media screen and (max-width: 767px) {
-  #volume-control {
-    display: none;  /* Hide volume control on small screens */
-  }
-
-  #progress-container {
-    display: none;  /* Hide progress bar on small screens */
-  }
-}
+  

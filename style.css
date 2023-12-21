@@ -249,6 +249,7 @@ audio {
   #main-container {
     flex-direction: column;
     align-items: center;
+    width: 100%;
   }
 
   #cards-section, #preview-window {
@@ -260,42 +261,35 @@ audio {
   }
 
   .card {
-    width: 100px; /* Cards take full width on smaller screens */
+    flex: 1 1 calc(50% - 10px); /* Adjust card width for smaller screens */
     max-width: none; /* Remove max-width constraint */
+    background-size: 25%;
   }
 
-  #h5_override {
-    font-size: .8rem !important;
+  #h5_override, #h6_override {
+    /* font-size: .8rem !important; */
   }
 
   #preview-window {
     position: sticky;
-    top: 0px; /* Stick to the top of the viewport */
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%; /* Centered and adjusted width on mobile */
-    margin-bottom: 24px;
-    z-index: 100; /* Ensure it stays on top of other content */
-    background-color: #ffffff; /* Optional: to ensure text readability */
-    width: 100%; /* Full width of the viewport */
+    top: 0;
+    z-index: 1000; /* Increased z-index */
+    order: -1;
+    background-color: #ffffff;
+    width: 100%;
     margin: 0;
     padding: 10px;
-    border: 1px solid #ddd; /* Optional: for styling */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: for styling */
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   }
 
-  #custom-audio-player {
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center align the elements */
-  }
-
-  #control_bar {
-    width: 100%; /* Full width for control bar */
-    justify-content: center; /* Center elements in the control bar */
+  #custom-audio-player, #control_bar {
+    flex-direction: column;
+    align-items: center;
   }
 
   #progress-container, #volume-control {
-    display: none; /* Hide elements not needed on mobile */
+    display: none; /* Hide these controls on smaller screens if not needed */
   }
 
   #time-display {
@@ -303,6 +297,24 @@ audio {
     margin-top: 10px; /* Add some spacing */
     width: 100%; /* Full width */
     text-align: center; /* Center align text */
+  }
+
+  .accordion-item .accordion-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this to 'center' if you prefer */
+    align-items: center;
+  }
+
+  .accordion-item .accordion-body .card {
+    flex: 0 0 45%; /* Smaller percentage to ensure two cards per row */
+    margin: 2.5%; /* Half of the remaining space to maintain equal spacing on all sides */
+    max-width: 45%; /* Aligns with the flex-basis */
+  }
+  
+  .accordion {
+    margin: 0px;
   }
 }
   

@@ -1,3 +1,8 @@
+/* About Section */
+.about-section {
+  padding: 16px;
+}
+
 /* Bootstrap Overides */
 #h5_override {
   font-size: 1rem;

@@ -243,6 +243,10 @@ audio {
   cursor: pointer;
 }
 
+br {
+  line-height: 10px;
+}
+
 
 /* Responsive design adjustments */
 @media (max-width: 768px) {

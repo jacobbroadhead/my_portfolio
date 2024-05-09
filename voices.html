@@ -354,6 +354,13 @@
         this.classList.toggle('selected');
     });
 </script>
+<script>
+  // Toggle the visibility of the navigation menu on small screens
+  document.getElementById("menu-toggle").addEventListener("click", function() {
+      var menuList = document.querySelector(".menu-list");
+      menuList.classList.toggle("show-menu");
+  });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,812 @@
+/* ---- Footer ---- */
+.footer-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#copyright {
+  margin: auto;
+}
+
+footer { 
+  position: relative; 
+  bottom: 0; 
+  left: 0; 
+  z-index: 10;
+  background-color: #4B6C81;
+  width: 100%;
+}
+
+/* ---- Home Page ---- */
+#homeHero {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(35, 35, 35);
+}
+
+#titleAndHeadlines {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.homeSections {
+  max-width: 70%;
+  padding: 48px;
+  margin: auto;
+}
+
+
+/* Container with background image */
+#design-background-section {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background-image: url('https://imagedelivery.net/Hx1aTvsVNAE_-Y10bvz3BQ/56c35d03-c128-42fb-2999-3b4184438800/public'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  box-shadow: 2px 2px 6px 4px #676565b0;
+}
+
+#architect-background-section {
+  position: relative;
+  margin-bottom: 24px;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background-image: url('https://imagedelivery.net/Hx1aTvsVNAE_-Y10bvz3BQ/a25646c3-13e7-4c1f-142b-d1e5bf6a9600/public'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the image */
+  box-shadow: 2px 2px 6px 4px #676565b0;
+}
+
+#actor-background-section {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 400px; /* Adjust as needed */
+  background-image: url('https://imagedelivery.net/Hx1aTvsVNAE_-Y10bvz3BQ/4a58d66e-99ef-4637-efa0-60b43a529f00/public'); /* Replace with the path to your image */
+  background-size: cover; /* Cover the entire area */
+  background-position: top; /* Center the image */
+  box-shadow: 2px 2px 6px 4px #676565b0;
+
+}
+
+/* Semi-transparent overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #162027a1;
+  ; /* Adjust transparency as needed */
+  display: flex; /* Use Flexbox to center the title */
+  justify-content: center; /* Horizontally centered */
+  align-items: center; /* Vertically centered */
+  color: white; /* Ensure the title is visible against the dark background */
+  font-size: 3em; /* Adjust font size as needed */
+  text-align: center;
+  transition-duration: 0.6s;
+}
+
+.overlay:hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #4b6c817b;
+  ; /* Adjust transparency as needed */
+  display: flex; /* Use Flexbox to center the title */
+  justify-content: center; /* Horizontally centered */
+  align-items: center; /* Vertically centered */
+  color: #18252d; /* Ensure the title is visible against the dark background */
+  font-size: 3em; /* Adjust font size as needed */
+  text-align: center;
+}
+
+/* Styles for the Contact Information Section */
+.resume-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #4B6C81; /* Green button color */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#resumeButton {
+  color: white;
+}
+
+#resumeButton:hover {
+  color: #4B6C81;
+}
+
+.contact-info {
+  width: 300px; /* Adjust width as necessary */
+  margin: 0; /* Center the div horizontally */
+  padding: 20px;
+  text-align: center; /* Center text inside the div */
+}
+
+.contactInfoItems a {
+  color: white;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.contactInfoItems {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.contactField {
+  margin: 10px 8px 10px 8px;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  display: block; /* Links appear one under the other */
+  margin: 10px 0;
+  text-decoration: none;
+  color: #0073b1; /* LinkedIn blue */
+}
+
+.resume-button:hover {
+  background-color: white;
+  border: solid #4B6C81
+}
+
+#exampleModal {
+  position: fixed;
+}
+
+
+/* ---- Nav Bar/Menu ---- */
+#menu {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-item {
+  text-align: center;
+  padding: 4px 16px 4px 16px;
+  color: white;
+  font-size: 20px;
+  margin: 0px;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-item a:hover {
+  color: #1C2931;
+}
+
+header {
+  background-color: #4B6C81;
+  padding: 16px 32px 16px 32px;
+}
+
+#logo {
+  max-height: 48px;
+  width: auto;
+}
+
+
+
+/* ---- Architect Page ---- */
+#architectHero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 48px 0 48px;
+  background-color: #640e07;
+}
+
+.heroParagraph {
+  color: white;
+  font-size: 1.3rem;
+}
+
+#architectHeroText {
+  padding: 48px 0 48px 0;
+}
+
+.architectureSection {
+  padding: 48px;
+}
+
+.italisizedWord {
+  font-style: italic; 
+}
+
+.architectureDiagram {
+display: flex;
+flex-direction: column;
+align-items: center;
+border:#bdbaba solid ;
+width: 90%;
+margin: auto;
+}
+
+.diagramImage {
+  width: 80%;
+  padding: 16px;
+}
+
+.architectureWork {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.architectureProcess {
+  padding: 16px;
+  min-width: 150px;
+  max-width: 400px;
+}
+
+
+
+/* ---- Designer Page ---- */
+
+#topOfDesignPage {
+  display: flex;
+  flex-direction: row;
+  background: linear-gradient(#4B6C81, #ffffff);
+  max-height: 400px;
+  margin-bottom: 64px;
+}
+
+#heroAndImage {
+  display: flex;
+  flex-direction: row;
+}
+
+#designHero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(#4B6C81, #ffffff);
+  padding: 48px 48px 64px 48px;
+  width: 100%;
+}
+
+#designerTitle {
+  color: white;
+}
+
+#heroDescription {
+  color: white;
+}
+
+.heroImage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  width: 100%;
+}
+
+.heroImageDesigner {
+  height: 75px;
+}
+
+#productLogos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.heroText {
+  max-width: 100%;
+}
+
+#connectHeaderSection {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+}
+
+#arrows {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  margin: 40px 0 40px 0;
+}
+
+.arrow {
+  height: 32px;
+  width: auto;
+}
+
+#Connect {
+  margin-top: 40px;
+}
+
+#connectModals {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#hiFiCover {
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+#hiFiDescription {
+  width: 90%;
+}
+
+.designModals {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Custom styles for the wide modal */
+.wide-modal .modal-dialog {
+  max-width: 1000px; /* Adjust the width as needed */
+}
+
+.modalContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#hiFiModal {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+#hiFiDescription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fidelitySection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.fidelityDescription {
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.phaseDescription {
+  padding: 0px;
+  text-align: start;
+}
+
+.modalSectionTitle {
+  text-align: center;
+}
+
+.modalCoverImage {
+  max-width: 400px;
+  margin: 12px 0;
+  box-shadow: 4px 2px 4px 4px #c9c8c8b0;
+}
+
+.connect-img {
+  width: 90%;
+  height: auto;
+  margin: 16px;
+  border: solid;
+  border-color: #6b7685;
+}
+
+.modalDescriptionAndButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+
+
+/* ---- Voices Page ---- */
+/* About Section */
+#about-me {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background: linear-gradient(to right, #3c3936,#040404);
+  background-position: right;
+}
+
+#voicesHeader {
+  color: white;
+}
+
+#voicesParagraph {
+  color: white;
+}
+
+#about {
+  padding: 16px;
+  width: 65%;
+  min-width: 500px;
+}
+
+#profile-picture-container {
+  width: 35%; /* Adjust this width as needed */
+  max-width: 350px; /* Set a maximum width for the container */
+  display: flex;
+  justify-content: flex-end; /* Align the image to the right within the container */
+  padding: 20px;
+}
+
+/* Profile Picture */
+.profile_picture {
+  max-width: 100%; /* Ensure the image doesn't exceed the width of its container */
+  max-height: 100%; /* Ensure the image doesn't exceed the height of its container */
+  object-fit: contain; /* Maintain aspect ratio and fit the image within its container */
+}
+
+/* Bootstrap Overides */
+#h5_override {
+  font-size: 1rem;
+}
+
+#h6_override {
+  font-size: .75rem;
+}
+
+/* Main container styling */
+#main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding: 20px;
+  max-width: 1100px;
+}
+
+.accordion {
+  margin-right: 16px;
+}
+
+/* Adjust the width of the accordion items */
+.accordion-item {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* Add flex-wrap to the accordion body to allow card wrapping */
+.accordion-body {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  flex-wrap: wrap; /* Allow card wrapping */
+}
+
+/* Adjust the width of the accordion buttons */
+.accordion-button {
+  width: 100%;
+  text-align: left; /* Optional: Align text to the left */
+}
+
+.accordion-button.collapsed {
+  min-width: 400px;
+}
+
+/* Remove the max-width constraint for the accordion body */
+.accordion-collapse.collapse {
+  max-width: none;
+}
+
+/* Cards section styling with flex row */
+#cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.card {
+  flex: 0 1 calc(33.33% - 10px);
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  max-width: 120px;
+  margin: 8px;
+  max-height: 160px;
+  background-image: url('thumbnail1.jpg');
+  background-size: 35%; /* This will cover the entire card */
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+#animation_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Animation.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#vg_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Video%20Games.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#tv_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/TV.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+#books_card_override {
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/media/Audiobooks.png?raw=true);
+  background-color: #436782;
+  color: white;
+}
+
+.selected-animate {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Animation%20Selected.png?raw=true)!important;
+}
+
+.selected-vg {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Video%20Games%20Selected.png?raw=true)!important;
+}
+
+.selected-tv {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/TV%20Selected.png?raw=true)!important;
+}
+
+.selected.books {
+  background-color: #f0f0f0 !important; /* Light grey background */
+  border: 2px solid #436782; /* Solid black border */
+  box-shadow: 0 0 10px #436782; /* Shadow for depth */
+  color: #436782 !important;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Audiobooks%20Selected.png?raw=true)!important;
+}
+
+#animation_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Animation%20Selected.png?raw=true);
+}
+
+#vg_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Video%20Games%20Selected.png?raw=true);
+}
+
+#tv_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/TV%20Selected.png?raw=true);
+}
+
+#books_card_override:hover {
+  background-color: #e0e0e0;
+  color: #436782;
+  background-image: url(https://github.com/jacobbroadhead/my_portfolio/blob/main/Audiobooks%20Selected.png?raw=true);
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h3, .card p {
+  margin-top: 5px;
+}
+
+/* Preview window styling */
+#preview-window {
+  position: sticky;
+  top: 20px;
+  flex: 0 1 40%;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#reel-info {
+  margin-bottom: 15px;
+}
+
+audio {
+  width: 100%;
+}
+
+/* Audio Player */
+#custom-audio-player {
+  background-color: #f2f2f2;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+#play-pause-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#play-pause-button:hover {
+  background-color: #45a049;
+}
+
+#progress-container {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+#progress {
+  background-color: #4CAF50;
+  height: 100%;
+  border-radius: 5px;
+  width: 100px;
+}
+
+#time-display {
+  font-size: 12px;
+  color: #333;
+  min-width: 60px;
+  text-align: center;
+}
+
+#volume-control {
+  width: 75px;
+  cursor: pointer;
+}
+
+br {
+  line-height: 10px;
+}
+
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  #main-container {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #cards-section, #preview-window {
+    width: 100%;
+  }
+
+  .accordion-button.collapsed {
+    min-width: 200px; /* Adjust the minimum width for mobile */
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 10px); /* Adjust card width for smaller screens */
+    max-width: none; /* Remove max-width constraint */
+    background-size: 25%;
+  }
+
+  #h5_override, #h6_override {
+    /* font-size: .8rem !important; */
+  }
+
+  #preview-window {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Increased z-index */
+    order: -1;
+    background-color: #ffffff;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  #custom-audio-player, #control_bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #progress-container, #volume-control {
+    display: none; /* Hide these controls on smaller screens if not needed */
+  }
+
+  #time-display {
+    order: 3; /* Move time display below controls */
+    margin-top: 10px; /* Add some spacing */
+    width: 100%; /* Full width */
+    text-align: center; /* Center align text */
+  }
+
+  .accordion-item .accordion-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust this to 'center' if you prefer */
+    align-items: center;
+  }
+
+  .accordion-item .accordion-body .card {
+    flex: 0 0 45%; /* Smaller percentage to ensure two cards per row */
+    margin: 2.5%; /* Half of the remaining space to maintain equal spacing on all sides */
+    max-width: 45%; /* Aligns with the flex-basis */
+  }
+  
+  .accordion {
+    margin: 0px;
+  }
+}
+  
+  

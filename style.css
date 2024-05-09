@@ -19,7 +19,7 @@ footer {
   width: 100%;
 }
 
-/* ---- Home Page ---- */
+/* ---- Home Page Desktop ---- */
 #homeHero {
   display: flex;
   flex-direction: row;
@@ -174,22 +174,78 @@ footer {
   position: fixed;
 }
 
+/* ---- Home Page Responsive ---- */
+/* Base styles for better responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #homeHero {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .homeSections, #titleAndHeadlines, .contact-info {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .overlay {
+    font-size: 2em; /* Smaller text on smaller devices */
+  }
+
+  .contact-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contactInfoItems {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  #design-background-section, #architect-background-section, #actor-background-section {
+    height: 300px; /* Smaller height for smaller screens */
+  }
+}
+
 
 /* ---- Nav Bar/Menu ---- */
 #menu {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
+  padding: 16px 32px;
+}
+
+#logo {
+  max-height: 48px;
+  width: auto;
+}
+
+.hamburger {
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-list {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu-item {
   text-align: center;
-  padding: 4px 16px 4px 16px;
+  padding: 4px 16px;
   color: white;
   font-size: 20px;
-  margin: 0px;
 }
 
 .menu-item a {
@@ -203,13 +259,32 @@ footer {
 
 header {
   background-color: #4B6C81;
-  padding: 16px 32px 16px 32px;
 }
 
-#logo {
-  max-height: 48px;
-  width: auto;
+@media screen and (max-width: 768px) {
+  .menu-list {
+    display: none;
+    flex-direction: column;
+  }
+
+  .menu-list.show-menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  #logo {
+    max-height: 40px;
+  }
+
+  .menu-item {
+    font-size: 18px;
+    padding: 8px;
+  }
 }
+
 
 
 
@@ -265,6 +340,67 @@ margin: auto;
   padding: 16px;
   min-width: 150px;
   max-width: 400px;
+}
+
+
+/* ---- Architect Page Responsive */
+/* Responsive Architect Page Adjustments */
+@media (max-width: 768px) {
+  #architectHero {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center; /* Center-align text for a more readable mobile layout */
+  }
+
+  #architectHeroText {
+    padding: 20px;
+    text-align: center; /* Ensure text is centered on small screens */
+  }
+
+  .heroParagraph {
+    font-size: 1rem; /* Slightly smaller text size for readability on mobile */
+  }
+
+  .architectureWork {
+    flex-direction: column;
+    align-items: center; /* Center items vertically */
+    margin: auto;
+  }
+
+  .architectureProcess {
+    min-width: 90%;
+    max-width: 90%;
+    padding: 10px 20px;
+  }
+
+  .architectureDiagram {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .diagramImage {
+    width: 100%; /* Full width for mobile devices */
+  }
+
+  footer {
+    text-align: center; /* Center footer content on smaller screens */
+    padding: 20px;
+  }
+
+  .contactInfoItems {
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .contactField {
+    margin-bottom: 5px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 
@@ -440,6 +576,175 @@ margin: auto;
   align-items: flex-start;
   justify-content: space-between;
 }
+
+/* ---- Designer Page Responsive ---- */
+/* Base styles, assumed to be for desktop */
+
+@media (max-width: 1200px) {
+  /* Large tablets and small laptops */
+  #topOfDesignPage {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #heroAndImage, #designHero, .heroImage, #connectHeaderSection, #connectModals, .modalContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #productLogos {
+    flex-direction: column;
+  }
+
+  .fidelitySection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroImageDesigner {
+    height: 60px;
+  }
+
+  .modalCoverImage, #hiFiCover {
+    max-width: 100%;
+  }
+
+  .arrow {
+    height: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Tablets and medium devices */
+  #topOfDesignPage {
+    flex-direction: column;
+    max-height: none;
+    text-align: center;
+    padding: 16px;
+  }
+
+  #heroAndImage, #designHero, .heroImage, #connectHeaderSection, #connectModals, .modalContainer {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+  }
+
+  #productLogos {
+    flex-direction: column;
+  }
+
+  .fidelitySection {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroImageDesigner {
+    height: 50px;
+  }
+
+  .modalCoverImage, #hiFiCover {
+    max-width: 100%;
+  }
+
+  .arrow {
+    height: 20px;
+  }
+
+  .modalDescriptionAndButton, .fidelityDescription, #hiFiDescription {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile devices */
+  #topOfDesignPage {
+    padding: 8px;
+    margin-bottom: 32px;
+  }
+
+  #designHero {
+    padding: 24px;
+  }
+
+  .heroImageDesigner {
+    height: 40px;
+  }
+
+  .arrow {
+    height: 16px;
+  }
+
+  .modalCoverImage, #hiFiCover {
+    max-width: 100%;
+    margin: 8px 0;
+  }
+
+  .fidelitySection, .fidelityDescription, #hiFiDescription, .modalDescriptionAndButton {
+    align-items: center;
+    text-align: center;
+  }
+
+  #connectHeaderSection {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .modalContainer {
+    width: 100%;
+    padding: 16px;
+  }
+
+  #hiFiModal {
+    padding: 16px;
+  }
+}
+
+/* Base styling for #thoughtBubbleImage */
+#thoughtBubbleImage {
+  width: 100%; /* Ensure it takes the full width of its container */
+  text-align: center; /* Center-align the image if it's an inline element */
+  overflow: hidden; /* Prevents image from spilling out of its container */
+  display: flex;
+  justify-content: center; /* Centers the image horizontally within the flex container */
+}
+
+#thoughtBubbleImage img {
+  max-width: 100%; /* Ensures the image does not exceed the width of its container */
+  height: auto; /* Keeps the aspect ratio of the image */
+  max-height: 100%; /* Ensures the image does not exceed the height of its container */
+}
+
+/* Adjustments for different screen sizes */
+@media (max-width: 1200px) {
+  /* For large tablets and small laptops */
+  #thoughtBubbleImage img {
+    max-width: 75%; /* Smaller max width for smaller devices */
+  }
+}
+
+@media (max-width: 768px) {
+  /* For tablets and medium devices */
+  #thoughtBubbleImage {
+    order: -1; /* Positions the thought bubble above other elements if in a flex container */
+    margin-bottom: 16px; /* Adds some space below the image */
+  }
+  #thoughtBubbleImage img {
+    max-width: 50%; /* Even smaller max width for medium devices */
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile devices */
+  #thoughtBubbleImage img {
+    max-width: 80%; /* More fluid on very small screens */
+  }
+}
+
+
+
 
 
 
@@ -735,78 +1040,139 @@ br {
 }
 
 
-/* Responsive design adjustments */
-@media (max-width: 768px) {
+/* ---- Voices Page Responsive ---- */
+/* Base Styles (Retain your original CSS) */
+
+/* Media Query for Small Devices (up to 600px wide) */
+@media (max-width: 600px) {
+  #about-me {
+    flex-direction: column; /* Stack sections vertically */
+    padding-left: 20px;
+  }
+
+  #about {
+    width: 100%; /* Full width for content */
+    min-width: unset;
+    padding: 10px;
+  }
+
+  #profile-picture-container {
+    width: 100%; /* Make the profile image full width */
+    max-width: 100%; 
+    justify-content: center; /* Center the image within the container */
+    padding: 10px;
+  }
+
+  .profile_picture {
+    max-width: 75%; /* Reduce image size for smaller devices */
+  }
+
   #main-container {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-  }
-
-  #cards-section, #preview-window {
-    width: 100%;
+    padding: 10px;
   }
 
   .accordion-button.collapsed {
-    min-width: 200px; /* Adjust the minimum width for mobile */
+    min-width: unset;
+  }
+
+  .accordion-body {
+    flex-direction: column; /* Stack cards vertically */
   }
 
   .card {
-    flex: 1 1 calc(50% - 10px); /* Adjust card width for smaller screens */
-    max-width: none; /* Remove max-width constraint */
-    background-size: 25%;
-  }
-
-  #h5_override, #h6_override {
-    /* font-size: .8rem !important; */
+    flex: 0 1 100%; /* Make each card full width */
+    max-width: unset; /* Remove the width constraint */
+    margin: 8px 0; /* Add vertical margin */
   }
 
   #preview-window {
-    position: sticky;
+    flex: 0 1 100%;
+    position: relative; /* Adjust position for mobile screens */
     top: 0;
-    z-index: 1000; /* Increased z-index */
-    order: -1;
-    background-color: #ffffff;
-    width: 100%;
-    margin: 0;
     padding: 10px;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
   }
 
-  #custom-audio-player, #control_bar {
-    flex-direction: column;
-    align-items: center;
+  #play-pause-button {
+    padding: 8px;
+    font-size: 14px;
   }
 
-  #progress-container, #volume-control {
-    display: none; /* Hide these controls on smaller screens if not needed */
+  #progress-container {
+    height: 3px; /* Adjust the progress bar height */
   }
 
   #time-display {
-    order: 3; /* Move time display below controls */
-    margin-top: 10px; /* Add some spacing */
-    width: 100%; /* Full width */
-    text-align: center; /* Center align text */
-  }
-
-  .accordion-item .accordion-body {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust this to 'center' if you prefer */
-    align-items: center;
-  }
-
-  .accordion-item .accordion-body .card {
-    flex: 0 0 45%; /* Smaller percentage to ensure two cards per row */
-    margin: 2.5%; /* Half of the remaining space to maintain equal spacing on all sides */
-    max-width: 45%; /* Aligns with the flex-basis */
-  }
-  
-  .accordion {
-    margin: 0px;
+    font-size: 10px; /* Reduce the time display size */
   }
 }
-  
-  
+
+/* Media Query for Medium Devices (up to 900px wide) */
+@media (max-width: 900px) {
+  #about-me {
+    flex-direction: column; /* Stack sections vertically */
+    padding-left: 20px;
+  }
+
+  #about {
+    width: 100%; /* Full width for content */
+    min-width: unset;
+    padding: 10px;
+  }
+
+  #profile-picture-container {
+    width: 100%; /* Make the profile image full width */
+    max-width: 100%; 
+    justify-content: center; /* Center the image within the container */
+    padding: 10px;
+  }
+
+  .profile_picture {
+    max-width: 80%; /* Adjust image size */
+  }
+
+  #main-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .accordion-button.collapsed {
+    min-width: unset;
+  }
+
+  .accordion-body {
+    flex-direction: column; /* Stack cards vertically */
+  }
+
+  .card {
+    flex: 0 1 100%; /* Make each card full width */
+    max-width: unset; /* Remove the width constraint */
+    margin: 8px 0; /* Add vertical margin */
+  }
+
+  #preview-window {
+    flex: 0 1 100%;
+    position: relative;
+    top: 0;
+    padding: 10px;
+    margin-top: 20px;
+  }
+
+  #play-pause-button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #progress-container {
+    height: 4px; /* Adjust the progress bar height */
+  }
+
+  #time-display {
+    font-size: 12px; /* Adjust the time display size */
+  }
+}
+
+
